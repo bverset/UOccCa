@@ -32,7 +32,12 @@ public class PrimerApp {
         double calificacionFinal;
         calificacionFinal = (primerparcial+segundoparcial+tercerparcial+quartoparcial+quintoparcial+sextoparcial)/100;
         
-        System.out.println("Cuotacion final:" + calificacionFinal);
+        System.out.println("Cuotacion final:" + calificacionFinal + " Parcial:" + parcial());
     }
+    
+    public static double parcial() {
+    double test = 2.3;
+    return test;
+}
     
 }
