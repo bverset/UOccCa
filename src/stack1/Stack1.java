@@ -20,20 +20,20 @@ public class Stack1 {
     public static void main(String[] args) {
         // TODO code application logic here
         Stack<Integer> enteros = new Stack<>();
-        
-                int numeros;
+
+        int numeros;
         numeros = Integer.parseInt(JOptionPane.showInputDialog(null, "Valor",
                 "Numeros de enteros", JOptionPane.QUESTION_MESSAGE));
-        
-                for(int i=0;i<numeros;i++){
-                    enteros.push(Integer.parseInt(JOptionPane.showInputDialog(null, "Valor",
-                "Enteros", JOptionPane.QUESTION_MESSAGE)));           
+
+        for (int i = 0; i < numeros; i++) {
+            enteros.push(Integer.parseInt(JOptionPane.showInputDialog(null, "Valor",
+                    "Enteros", JOptionPane.QUESTION_MESSAGE)));
         }
-        
-                int sizestack = enteros.size();
-        for(int i=0;i<numeros;i++){
-            JOptionPane.showMessageDialog(null, "Enteros (" + (sizestack-i) + ") = " + enteros.pop());          
+
+        int sizestack = enteros.size();
+        for (int i = 0; i < numeros; i++) {
+            JOptionPane.showMessageDialog(null, "Enteros (" + (sizestack - i) + ") = " + enteros.pop());
         }
     }
-    
+
 }
