@@ -12,9 +12,9 @@ package heritages1;
 public class Producto {
     String nombre;
     Double Precio;
-    int tipo;
+    String tipo;
 
-    public Producto(String nombre, Double Precio, int tipo) {
+    public Producto(String nombre, String tipo, Double Precio) {
         this.nombre = nombre;
         this.Precio = Precio;
         this.tipo = tipo;
@@ -40,14 +40,18 @@ public class Producto {
         this.Precio = Precio;
     }
 
-    public int getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(int tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
     
-    
+        public String toString()
+    {
+        return "El nombre del producto es " + this.getNombre() + " del tipo "
+                + this.getTipo() + " con un precio de " + this.getPrecio();
+    }
     
 }

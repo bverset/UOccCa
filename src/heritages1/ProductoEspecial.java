@@ -13,10 +13,10 @@ import java.util.logging.Logger;
  */
 public class ProductoEspecial extends Producto{
     Double volume;
-    int categoria;
+    String categoria;
 
-    public ProductoEspecial(String nombre, Double Precio, int tipo,Double volume, int categoria) {
-        super(nombre, Precio, tipo);
+    public ProductoEspecial(Double volume, String categoria,String nombre, String tipo, Double Precio) {
+        super(nombre, tipo, Precio);
         this.volume = volume;
         this.categoria = categoria;
     }
@@ -31,11 +31,11 @@ public class ProductoEspecial extends Producto{
         this.volume = volume;
     }
 
-    public int getCategoria() {
+    public String getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(int categoria) {
+    public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
 
@@ -55,13 +55,18 @@ public class ProductoEspecial extends Producto{
         this.Precio = Precio;
     }
 
-    public int getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(int tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-
+    public String toString()
+    {
+        String infoB = super.toString();
+        return infoB + " con un volumen de " + this.volume + " y una categoria "
+                + this.getCategoria();
+    }  
      
 }
