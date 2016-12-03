@@ -5,6 +5,7 @@
  */
 package awtgui1;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,6 +20,7 @@ public class SelPais extends javax.swing.JDialog {
     public SelPais(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        groupButton();
     }
 
     /**
@@ -33,6 +35,8 @@ public class SelPais extends javax.swing.JDialog {
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -47,6 +51,17 @@ public class SelPais extends javax.swing.JDialog {
 
         jLabel1.setText("Pais");
 
+        jRadioButton1.setSelected(true);
+        jRadioButton1.setText("masculino");
+
+        jRadioButton2.setText("feminino");
+        jRadioButton2.setActionCommand("");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -59,6 +74,12 @@ public class SelPais extends javax.swing.JDialog {
                     .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(376, 376, 376))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(247, 247, 247)
+                .addComponent(jRadioButton1)
+                .addGap(38, 38, 38)
+                .addComponent(jRadioButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -69,7 +90,11 @@ public class SelPais extends javax.swing.JDialog {
                     .addComponent(jLabel1))
                 .addGap(34, 34, 34)
                 .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(394, Short.MAX_VALUE))
+                .addGap(58, 58, 58)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2))
+                .addContainerGap(307, Short.MAX_VALUE))
         );
 
         pack();
@@ -94,6 +119,10 @@ public class SelPais extends javax.swing.JDialog {
         }
      
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,11 +164,29 @@ public class SelPais extends javax.swing.JDialog {
                 dialog.setVisible(true);
             }
         });
+        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     // End of variables declaration//GEN-END:variables
+
+
+private void groupButton( ) {
+
+ButtonGroup bg1 = new ButtonGroup( );
+
+bg1.add(jRadioButton1);
+bg1.add(jRadioButton2);
+
+
 }
+
+}
+
+
